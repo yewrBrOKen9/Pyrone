@@ -4,12 +4,12 @@ from pyrogram import Client, filters
 from helpers.data import OneWord
 from config import *
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["l0l"], [""]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["GANDU"], [""]))
 async def oneword(onew: Client, e: Message):
       if e.reply_to_message:
           id = e.reply_to_message_id
           if int(id) in SUDO_USERS:
-                await e.reply_text("BAAP KO GAALI MT DO")
+                await e.reply_text("BAAP KO GAALI MT DO WRNA CHUD JAAWOGE BINA CONDOM KE")
           else:
               for msg in OneWord:
                 await e.reply_text(msg, reply_to_message_id=id)
